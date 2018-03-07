@@ -53,11 +53,11 @@ ob = [0.5 3 ; 3 8 ; 8 15 ; 15 30]; % frequency bands of interest
 len1 = length(dat)./fs1/3600; 
 fs2 = 64; epl = 60; ep = epl*60*fs2; olap = ep/4; % segment into hour long epochs 15 minute overlap if possible
 block_no = floor(length(dat)/olap)-3;
-if block_no == 0
+if block_no <= 0
     r1 = 1; r2 = length(dat);
     dd = dat(:, r1:r2);
     [bursts, art, ndm, reeg, ~, ~] = estimate_features_preprocessing(dd, fs1, [c1 ; c2]');    
-    if sum(art)<12*60
+    if sum(art)<12*60*fs2
 ft1 = general_features_ss(ndm, bursts, reeg, art, c1, c2, ob, fs2, [c1' c2'], tht{val});
 va = estimate_vigilance_state_new(bursts, c1, c2, 300*fs2, art);
 ft2 = general_features_qs(va, ndm, bursts, reeg, art, c1, c2, ob, fs2, [c1' c2'], tht{val});
@@ -72,7 +72,7 @@ for z1 = 1:block_no;
     r1 = 1+(z1-1)*olap; r2 = r1+ep-1;
     dd = dat(:, r1:r2);
     [bursts, art, ndm, reeg, ~, ~] = estimate_features_preprocessing(dd, fs1, [c1 ; c2]');    
-     if sum(art)<12*60
+     if sum(art)<12*60*fs2
     ft1(z1,:) = general_features_ss(ndm, bursts, reeg, art, c1, c2, ob, fs2, [c1' c2'], tht{val});
 va = estimate_vigilance_state_new(bursts, c1, c2, 300*fs2, art);
 ft2(z1,:) = general_features_qs(va, ndm, bursts, reeg, art, c1, c2, ob, fs2, [c1' c2'], tht{val});
