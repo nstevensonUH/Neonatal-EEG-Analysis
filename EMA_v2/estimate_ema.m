@@ -41,11 +41,12 @@ try
     [dat, fs1, c1, c2, art1, art2] = read_data_montage_ema(filename, val);
 catch
     disp('EEG montage could not be constructed')
+    art1 = 1; art2 = 1;
 end
 
-if min(min(art1))<25 || min(min(art2)) < 0.5*median(median(art2))
-    disp('EEG amplitude limits on at least 1 channel exceeds in referential montage')
-    ema = [];
+if min(min(art1))<25 || min(min(art2)) < 0.5*median(median(art2)) 
+    disp('EEG amplitude limits on at least 1 channel exceeded in referential montage')
+    ema = NaN;
 else
 
 % PREPROCESS (detect bursts, sleep state and artefact) AND ESTIMATE FEATURES
@@ -78,8 +79,8 @@ va = estimate_vigilance_state_new(bursts, c1, c2, 300*fs2, art);
 ft2(z1,:) = general_features_qs(va, ndm, bursts, reeg, art, c1, c2, ob, fs2, [c1' c2'], tht{val});
      else
           disp(['Epoch ' num2str(z1) ' exceeds EEG amplitude limits'])
-         ft1=NaN*ones(1,23);
-        ft2=NaN*ones(1,23);
+         ft1(z1,:)=NaN*ones(1,23);
+        ft2(z1,:)=NaN*ones(1,23);
      end
 end
 
