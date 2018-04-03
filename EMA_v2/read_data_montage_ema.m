@@ -74,7 +74,7 @@ else
 end
 end
 
-dat1 = zeros(length(data_mont),length(dat{ii})/4);
+dat1 = zeros(length(data_mont),length(dat{1})/4);
 for ii = 1:length(data_mont);
     dum = filter(Num_50, Den_50, double(data_mont{ii}).*scle(ii));
     dum = resample(dum, 64, fs(1));

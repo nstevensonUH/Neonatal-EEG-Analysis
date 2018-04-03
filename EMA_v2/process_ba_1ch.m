@@ -8,6 +8,7 @@ if flag == 1;
     
     r1 = find(diff([0 burst_anno 0]) == 1);
     r2 = find(diff([0 burst_anno 0]) == -1);
+    if isempty(r1)==0
     tst2 = r2-r1;
     rf = find(tst2<lim1);
     for z2 = 1:length(rf)
@@ -22,11 +23,13 @@ if flag == 1;
     for z2 = 1:length(rf)
         burst_anno(r2d(rf(z2)):r1d(rf(z2)))=1;
     end
-    
+    end
 else
 
+      
     r1 = find(diff([0 burst_anno 0]) == 1);
     r2 = find(diff([0 burst_anno 0]) == -1);
+    if isempty(r1)==0;
     %if r1(1) == 1; r1 = r1(2:end); r2 = r2(2:end); end
     %if r2(end) == length(burst_anno)+1; r1 = r1(1:end-1); r2 = r2(1:end-1); end
     r1d = r1(2:end); r2d = r2(1:end-1);
@@ -45,6 +48,6 @@ else
     for z2 = 1:length(rf)
         burst_anno(r1(rf(z2)):r2(rf(z2)))=0;
     end
-
+    end
 end
 

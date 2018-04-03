@@ -51,7 +51,7 @@ else
 
 % PREPROCESS (detect bursts, sleep state and artefact) AND ESTIMATE FEATURES
 ob = [0.5 3 ; 3 8 ; 8 15 ; 15 30]; % frequency bands of interest
-len1 = length(dat)./fs1/3600; 
+%len1 = length(dat)./fs1/3600; 
 fs2 = 64; epl = 60; ep = epl*60*fs2; olap = ep/4; % segment into hour long epochs 15 minute overlap if possible
 block_no = floor(length(dat)/olap)-3;
 if block_no <= 0
