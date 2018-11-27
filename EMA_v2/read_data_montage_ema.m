@@ -48,6 +48,11 @@ switch val
         str{1,1} = 'T3'; str{1,2} = 'O1'; 
         str{2,1} = 'T4'; str{2,2} = 'O2'; 
         c1 = 1; c2 = 2;
+    case 6
+        str = cell(2,2); 
+        str{1,1} = 'C3'; str{1,2} = 'O1'; 
+        str{2,1} = 'C4'; str{2,2} = 'O2'; 
+        c1 = 1; c2 = 2;
  end
         
 data_mont = cell(1,length(str));

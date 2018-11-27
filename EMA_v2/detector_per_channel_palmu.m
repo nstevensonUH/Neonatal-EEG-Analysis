@@ -22,7 +22,7 @@ th = 1.2/15*th1-0.1;%1.5;
 if th<0.3; th = 0.3; end
 if th>2.5; th = 2.5; end
 
-load  kirsi_BD_filters_256 % HP 6th order Elliptical fc = 10Hz. LP 1st order Butterworth fc = 0.5Hz
+load kirsi_BD_filters_256 % HP 6th order Elliptical fc = 10Hz. LP 1st order Butterworth fc = 0.5Hz
 
 % Initialise Parameters
 fs1 = 256; fs2 = 16;

@@ -10,6 +10,7 @@ function ema = estimate_ema(filename, val)
 % 3 is a 4-channel montage (Fp-C, C-O)
 % 4 is a 2-channel montage (Fp-T)
 % 5 is a 2-channel montage (T-O)
+% 6 is a 2-channel montage (C-O) - NB lower performance
 %
 % Aretfact detection based on the analysis of amplitude is also performed
 % NANs or text will be output at run time stating the the EEG did not meet
@@ -20,21 +21,24 @@ function ema = estimate_ema(filename, val)
 % January 2018
 
 % Index of channels that are temporal for different SVR models
-tht = cell(1,8); zz = tht;
+tht = cell(1,6); zz = tht;
 tht{1} = [3 4 7 8];
-tht{3} = [];
 tht{2} = [1 2 3 4];
+tht{3} = [];
 tht{4} = [1 2];
 tht{5} = [1 2];
+tht{6} = [];
+
 
 % Feature index for different SVR models
 f1 = 1:46;
 f2 = [1:15 17:38 40:46];
 zz{1} = f1;
-zz{3} = f2;
 zz{2} = f1;
+zz{3} = f2;
 zz{4} = f1;
 zz{5} = f1;
+zz{6} = f2;
 
 % READ FILE
 try
