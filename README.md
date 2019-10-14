@@ -12,7 +12,7 @@ EEG Maturational Age Estimator (version 2) - Reference [3]
 
 Seizure Detection (CNN) - Reference [4]
 
-Preterm Features Literature
+Preterm Maturational Features - from the literature
 
 ##
 
