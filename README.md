@@ -33,9 +33,11 @@ Matlab 2017a, Matlab 2018b
 
 ## Example 
 
-An example is shown in demo_burst_detection.m
+An example for the burst detection algorithm is demo_burst_detection.m
 
-The core file for the EMA estimator is estimate_ema.m
+An example for the EMA estimator is estimate_ema.m
+
+An example for seizure detection with CNNs is demo.m
 
 ## Built With
 
