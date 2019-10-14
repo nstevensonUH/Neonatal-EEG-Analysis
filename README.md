@@ -10,7 +10,7 @@ EEG Maturational Age Estimator (version 1) - Reference [2]
 
 EEG Maturational Age Estimator (version 2) - Reference [3]
 
-Seizure Detection (CNN)
+Seizure Detection (CNN) - Reference [4]
 
 Preterm Features Literature
 
@@ -25,13 +25,11 @@ see https://www.edfplus.info/specs/edf.html
 
 ## Planned Posts
 
-| Seizure detection algorithms
-
 | HIE grading algorithms
 
 ## Prerequisites
 
-Matlab 2017a
+Matlab 2017a, Matlab 2018b
 
 ## Example 
 
@@ -59,11 +57,13 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 [3] Stevenson NJ, Oberdorfer L, Koolen N, O’Toole JM, Werther T, Klebermass-Schrehof K, Vanhatalo S. Functional maturation in preterm infants measured by serial recording of cortical activity. Scientific Reports. 2017; 7(1): 12969.
 
+[4] Stevenson NJ, Tapani K, Vanhatalo S. Hybrid neonatal EEG seizure detection algorithms achieve the benchmark of visual interpretation of the human expert. In Proc. IEEE EMBC, Berlin, Germany 2019.
+
 ## Contact
 
 Nathan Stevenson
 
-University of Helsinki
+QIMR Berghofer, Previously of University of Helsinki
 
-email: nathan.stevenson@helsinki.fi
+email: nathan.stevenson@qimrberghofer.edu.au
 
