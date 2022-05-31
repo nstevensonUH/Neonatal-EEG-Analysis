@@ -14,6 +14,8 @@ Seizure Detection (CNN) - Reference [4]
 
 Preterm Maturational Features - from the literature
 
+Stand-alone Feature Set for Preterm EEG Analysis
+
 ##
 
 
@@ -38,6 +40,8 @@ An example for the burst detection algorithm is demo_burst_detection.m
 An example for the EMA estimator is estimate_ema.m
 
 An example for seizure detection with CNNs is demo.m
+
+An example for implementing the preterm feature set is demo_preterm.m
 
 ## Built With
 
@@ -65,7 +69,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 Nathan Stevenson
 
-QIMR Berghofer, Previously of University of Helsinki
+QIMR Berghofer, Previously at University of Helsinki
 
 email: nathan.stevenson@qimrberghofer.edu.au
 
