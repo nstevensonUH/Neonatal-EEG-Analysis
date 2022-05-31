@@ -31,7 +31,7 @@ see https://www.edfplus.info/specs/edf.html
 
 ## Prerequisites
 
-Matlab 2017a, Matlab 2018b
+Matlab 2017a, 2018b, 2020b
 
 ## Example 
 
@@ -45,7 +45,7 @@ An example for implementing the preterm feature set is demo_preterm.m
 
 ## Built With
 
-Matlab 2017a
+Matlab 2017a, 2018b, 2020b
 
 ## Authors
 
