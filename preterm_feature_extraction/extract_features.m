@@ -55,9 +55,9 @@ for ii = 1:block_no % loop per block
     r3 = (ii-1)*olap2+1; r4 = r3+epl2-1;
     SC = zeros(1,AA(1)); amp1x = SC; bdm = SC; bdst = SC; fvx = SC; tp = SC; alpha = SC; fse90 = SC;
     amp1 = zeros(4,AA(1)); ibi = zeros(3,AA(1)); bds = ibi;
-    B1 = zeros(2); B2 = B1; B3 = B1;
-    sk = zeros(length(durbins), 2); kt = sk;
-    ff = zeros(length(ob),2);
+    B1 = zeros(2, AA(1)); B2 = B1; B3 = B1;
+    sk = zeros(length(durbins), AA(1)); kt = sk;
+    ff = zeros(length(ob),AA(1));
     for ch = 1:AA(1) % loop per channel
          dat = dat64(ch, r3:r4);
          dat1 = data(ch, r1:r2);
